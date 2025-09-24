@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureScape 2025 — Метаверс-конференция</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Manrope:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <div class="logo-sphere" data-scroll-split>
+        <span class="logo-sphere__core">FutureScape</span>
+        <span class="logo-sphere__orbit">2025</span>
+      </div>
+      <nav class="site-nav">
+        <a href="#about">О конференции</a>
+        <a href="#speakers">Спикеры</a>
+        <a href="#program">Программа</a>
+        <a href="#register">Регистрация</a>
+      </nav>
+      <button class="cta" data-scroll="#about">Войти в будущее</button>
+    </header>
+
+    <main>
+      <section id="hero" class="section section--hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <h1 id="hero-title">FutureScape 2025</h1>
+          <p class="hero__lead">
+            Глобальная метаверс-конференция, где AI-продукты, AR/VR и человеческое воображение встречаются, чтобы создавать будущее.
+          </p>
+          <div class="hero__cta-group">
+            <button class="cta" data-scroll="#program">Исследовать программу</button>
+            <button class="cta cta--ghost" data-scroll="#register">Забронировать портал</button>
+          </div>
+        </div>
+        <div class="hero__orbits" aria-hidden="true">
+          <ul class="hero__orbit-list">
+            <li>Metaverse Vision</li>
+            <li>AI x Creativity</li>
+            <li>Spatial Computing</li>
+            <li>Immersive Commerce</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="section section--about" aria-labelledby="about-title">
+        <div class="section__header">
+          <h2 id="about-title">О конференции</h2>
+          <p>
+            Погрузитесь в двухдневное путешествие по метавселенным: от стратегий построения цифровых миров до создания AI-двойников и сцен Immersive Commerce.
+          </p>
+        </div>
+        <div class="timeline" role="list">
+          <article class="timeline__item" role="listitem">
+            <span class="timeline__year">2021</span>
+            <h3>FutureScape Origin</h3>
+            <p>Первое соединение создателей метавселенных, где родился манифест открытых миров.</p>
+          </article>
+          <article class="timeline__item" role="listitem">
+            <span class="timeline__year">2023</span>
+            <h3>Neural Shift</h3>
+            <p>AI режиссеры и XR-архитекторы объединились, чтобы создавать адаптивные метавселенные.</p>
+          </article>
+          <article class="timeline__item" role="listitem">
+            <span class="timeline__year">2024</span>
+            <h3>Portal Expansion</h3>
+            <p>Запуск международных метаверс-хабов и запуск FutureScape Labs.</p>
+          </article>
+          <article class="timeline__item timeline__item--current" role="listitem">
+            <span class="timeline__year">2025</span>
+            <h3>Immersive Convergence</h3>
+            <p>FutureScape 2025 объединяет AI, spatial computing и синтетические миры для построения реальности нового поколения.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="speakers" class="section section--speakers" aria-labelledby="speakers-title">
+        <div class="section__header">
+          <h2 id="speakers-title">Спикеры</h2>
+          <p>Пионеры метавселенных, голографические исполнители и лидеры AI-платформ рассказывают, как создается будущее.</p>
+        </div>
+        <div class="speakers-grid" role="list"></div>
+      </section>
+
+      <section id="program" class="section section--program" aria-labelledby="program-title">
+        <div class="section__header">
+          <h2 id="program-title">Программа</h2>
+          <div class="program__modes" role="radiogroup" aria-label="Режим просмотра программы">
+            <button class="program-mode is-active" role="radio" aria-checked="true" data-mode="day">Day</button>
+            <button class="program-mode" role="radio" aria-checked="false" data-mode="week">Week</button>
+            <button class="program-mode" role="radio" aria-checked="false" data-mode="map">Immersive Map</button>
+          </div>
+        </div>
+        <div class="program-view" aria-live="polite"></div>
+      </section>
+
+      <section id="register" class="section section--register" aria-labelledby="register-title">
+        <div class="section__header">
+          <h2 id="register-title">Регистрация</h2>
+          <p>Пройдите через три портала, чтобы закрепить место в FutureScape 2025.</p>
+        </div>
+        <form class="portal-form" novalidate>
+          <div class="portal-steps" data-step="1">
+            <div class="portal-step is-active" data-step="1">
+              <h3>Портал I — Идентификация</h3>
+              <label>
+                <span>Имя</span>
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" required />
+              </label>
+              <button type="button" class="cta" data-next>Следующий портал</button>
+            </div>
+            <div class="portal-step" data-step="2">
+              <h3>Портал II — Профиль</h3>
+              <label>
+                <span>Компания / Проект</span>
+                <input type="text" name="company" required />
+              </label>
+              <label>
+                <span>Роль</span>
+                <input type="text" name="role" required />
+              </label>
+              <button type="button" class="cta cta--ghost" data-prev>Назад</button>
+              <button type="button" class="cta" data-next>К финальному порталу</button>
+            </div>
+            <div class="portal-step" data-step="3">
+              <h3>Портал III — Выбор реальности</h3>
+              <label>
+                <span>Формат участия</span>
+                <select name="mode" required>
+                  <option value="">Выберите режим</option>
+                  <option value="hybrid">Hybrid Metaverse Pass</option>
+                  <option value="virtual">Virtual Immersive Pass</option>
+                  <option value="physical">On-site Reality Pass</option>
+                </select>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="afterparty" />
+                <span>Хочу получить секретный доступ к Afterparty</span>
+              </label>
+              <button type="button" class="cta cta--ghost" data-prev>Назад</button>
+              <button type="submit" class="cta">Завершить регистрацию</button>
+            </div>
+          </div>
+          <p class="portal-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>FutureScape 2025 · Синхронизация 12–13 ноября · NeoCity XR Arena</p>
+      <a class="afterparty-link" href="#afterparty" hidden>Вход в секретный портал</a>
+    </footer>
+
+    <section id="afterparty" class="section section--afterparty" aria-labelledby="afterparty-title" hidden>
+      <div class="afterparty__glitch-layer" aria-hidden="true"></div>
+      <div class="afterparty__content">
+        <h2 id="afterparty-title">Afterparty: Neon Drift</h2>
+        <p>Вы прошли все порталы. Подключайтесь к закрытой сессии с лайв-сетами и visual experience в реальном времени.</p>
+        <audio controls loop>
+          <source src="https://cdn.pixabay.com/audio/2022/06/13/audio_7f6237ce86.mp3" type="audio/mpeg" />
+          Ваш браузер не поддерживает встроенное аудио.
+        </audio>
+      </div>
+    </section>
+
+    <script type="module" src="scripts/main.js"></script>
+  </body>
+</html>
